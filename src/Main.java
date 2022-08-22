@@ -10,7 +10,8 @@ public class Main {
         System.out.println("Digite a opção desejada:\n" +
                 "1 - Sacar\n" +
                 "2 - Depositar\n" +
-                "3 - Rendimento" );
+                "3 - Rendimento\n" +
+                "4 - Imprimir informações de conta");
         opcao = ler.nextInt();
 
         switch (opcao) {
@@ -35,6 +36,12 @@ public class Main {
             case 3:
                 System.out.println("Você escolheu a opção de Rendimento.");
                 System.out.println("O valor que sua conta rendeu até o momento é de: " + contaTeste.calculaRendimento());
+                break;
+            case 4:
+                System.out.println(contaTeste.recuperaDadosParaImpressao());
+                break;
+            default:
+                System.out.println("A opção selecionada não é uma opção válida!");
         }
     }
 }
